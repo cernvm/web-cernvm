@@ -3,37 +3,17 @@
     <h2>NEWS</h2>
     <div class="container">
       <div class="slider">
-        <div class="slide">
-          <div class="top">
-            <a href='' class="title">CernVM-FS 2.7.1</a>
-            <p class="date">05/03/2020</p>
+        {% for news in site.posts limit:4 %} 
+          <div class="slide">
+            <div class="top">
+              <a href='{{site.baseurl}}{{ news.url }}' class="title">{{ news.title }}</a>
+              <p class="date">{{ news.date | date: "%d/%m/%Y" }}</p>
+            </div>
+            <p>{{ news.excerpt }}</p> 
           </div>
-          <p>CernVM-FS 2.7.1 is a bugfix release. Please find the full release notes in our technical documentation.</p>
-        </div>
-        <div class="slide">
-          <div class="top">
-            <a href='' class="title">CernVM Users Workshop 2019</a>
-            <p class="date">15/02/2020</p>
-          </div>
-          <p>It is our pleasure to announce the CernVM Users Workshop 2019, which will take place from 3 June to 5 June 2019 at CERN...</p>
-        </div>
-        <div class="slide">
-          <div class="top">
-            <a href='' class="title">CernVM-FS 2.7.1</a>
-            <p class="date">05/01/2020</p>
-          </div>
-          <p>CernVM-FS 2.7.1 is a bugfix release. Please find the full release notes in our technical documentation.</p>
-        </div>
-        <div class="slide">
-          <div class="top">
-            <a href='' class="title">CernVM Users Workshop 2019</a>
-            <p class="date">15/02/2020</p>
-          </div>
-          <p>It is our pleasure to announce the CernVM Users Workshop 2019, which will take place from 3 June to 5 June 2019 at CERN...</p>
-        </div>
+        {% endfor %}        
       </div>
-      <div class='btn btn--outline'><a href="">Go to News
-      </a></div>
+      <div class='btn btn--outline'><a href="news.html">Go to News</a></div>
     </div>
   </section>
   <section class="support">

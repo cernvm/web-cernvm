@@ -16,7 +16,7 @@ html * {
   clear: both;
 }
 
-header, footer{
+header, footer, body.news-list-page{
   @include gradient-dark;
 }
 
@@ -60,6 +60,7 @@ section{
     background: linear-gradient(45deg, $light-gradient-bottom, $light-gradient-top);
     text-decoration: none;
     text-shadow: 0 1px 1px #00000047;
+    box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.4);
 
     &:hover{
       box-shadow: 0 0 5px 1px $light-gradient-bottom;
@@ -72,6 +73,12 @@ section{
       background: transparent;
       text-shadow: none;
       color: white;
+    }
+  }
+
+  &--icon{
+    a{
+      padding: 5px 15px 5px 10px;
     }
   }
 }
@@ -103,7 +110,7 @@ nav.menu{
     img{
       width: 60px;
       height: auto;
-      padding-top: 20px;
+      padding-top: 18px;
     }
   }
 
@@ -181,7 +188,7 @@ header {
           background-size: cover;
           background-repeat: no-repeat;
           background-position: center;
-          margin: 2px 10px 0;
+          margin: 0px 10px 0;
           vertical-align: top;
         }
 
@@ -237,6 +244,10 @@ section.download{
     opacity: 0.1  ;
   }
   .container{
+    background-color: rgba($color: #FFF, $alpha: 0.4);
+    border-radius: 5px;
+    padding: 50px;
+
     h3{
       text-align: center;
       font-size: 24px;
@@ -247,6 +258,60 @@ section.download{
       margin-bottom: 50px;
       line-height: 24px;
     }
+
+    table.download-table{
+      width: 100%;
+      table-layout: fixed;
+      text-align: center;
+      border-collapse: collapse;
+
+      th, td{
+        vertical-align: inherit;
+      }
+
+      th{
+        border-bottom: 1px solid rgba(255, 255, 255, 0.7);     
+        padding-bottom: 20px;
+
+        img{
+          width: 48px;
+        }
+
+        p{
+          margin-bottom: 0px;
+          font-weight: 400;
+
+          &.version-number{
+            font-size: 30px;
+            margin: 10px 0;
+            font-weight: 900;
+            letter-spacing: 2px;
+          }
+        }
+      }
+      
+      tbody{
+        tr{
+          td{
+            border-bottom: 1px solid rgba(255, 255, 255, 0.7);            
+            padding: 8px 0;
+
+            a{
+              padding: 5px 0;
+              display: inline-block;      
+            }
+
+            img{
+              max-width: 100px;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .h-scroll{
+    overflow-x: auto;
   }
 }
 /////////////////////////////////////////////////////////
@@ -427,4 +492,60 @@ section.support{
     }
   }
 }
+/////////////////////////////////////////////////////////
+
+// NEWS-LIST ////////////////////////////////////////////
+
+body.news-list-page{
+  min-height: 100vh;
+
+  section.news{
+    
+    .container{
+      background-color: white;
+      border-radius: 5px;
+      padding: 30px 50px;  
+
+      .news{
+        border-bottom: 2px solid #38485b33;
+
+        .news-date{
+          font-size: 18px;
+          font-weight: bold;
+          padding: 20px 0 10px;
+        }
+
+        .news-title a {
+          font-size: 24px;
+          font-weight: 600;
+          color: $secondary-color;
+          text-decoration: none;
+          display: inline-block;
+          padding-bottom: 10px;
+          transition: color .1s ease-in-out;
+
+          &:hover{
+            color:$main-color;
+          }
+        }
+
+        .news-preview {
+          padding: 8px 0;
+        }
+
+        .read-more a {
+          color: $secondary-color;
+          display: inline-block;
+          padding: 20px 0;
+          transition: color .1s ease-in-out;
+
+          &:hover{
+            color:$main-color;
+          }
+        }
+      }
+    }
+  }
+}
+
 /////////////////////////////////////////////////////////
