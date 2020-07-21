@@ -144,7 +144,7 @@ nav.menu{
           transition: all .15s ease-in-out;
         }
 
-        &:hover &:before{
+        &:hover :before{
           width: 100%;
         }
       }
