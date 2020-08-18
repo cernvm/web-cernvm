@@ -8,6 +8,6 @@ COPY . web-cernvm
 
 WORKDIR web-cernvm
 
-RUN bundle install && bundle exec jekyll build
+RUN bundle update && bundle install
 
 CMD bundle exec jekyll serve
