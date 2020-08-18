@@ -10,4 +10,4 @@ WORKDIR web-cernvm
 
 RUN bundle install && bundle exec jekyll build
 
-ENTRYPOINT bundle exec jekyll serve
+CMD bundle exec jekyll serve
