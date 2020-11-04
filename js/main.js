@@ -10,7 +10,7 @@ $('.slider').slick({
 //Smooth scrolling 
 $(document).ready(function(){
 // Select all links with hashes
-$('a[href*="#"]')
+  $('a[href*="#"]')
   // Remove links that don't actually link to anything
   .not('[href="#"]')
   .not('[href="#0"]')
@@ -45,6 +45,16 @@ $('a[href*="#"]')
       }
     }
   });
+
+  
+  if($(window).width() <= 1024){
+    $(".menu--inner >ul").addClass("mobile");
+
+    $( ".hamburger" ).click(function() {
+      $(".menu--inner >ul").toggleClass("open");
+    });
+  }
+
 });
 
 $(window).scroll(function() {    
@@ -56,3 +66,12 @@ $(window).scroll(function() {
       $("nav.menu").removeClass("transparent");
   }
 });
+
+$(window).resize(function() {
+  if($( window ).width() <= 1024){
+    $(".menu--inner >ul").addClass("mobile");
+  }else{
+    $(".menu--inner >ul").removeClass("mobile");
+    $(".menu--inner >ul").removeClass("open");
+  }
+})
