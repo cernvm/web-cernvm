@@ -115,9 +115,9 @@ nav.menu{
       }
     }
   }
-  
+
   div.menu--inner{
-    max-width: 1366px;    
+    max-width: 1366px;
     margin: auto;
   }
 
@@ -182,7 +182,7 @@ nav.menu{
         -o-transform-origin: left center;
         transform-origin: left center;
       }
-    
+
       span:nth-child(2) {
         top: 11px;
         -webkit-transform-origin: left center;
@@ -190,7 +190,7 @@ nav.menu{
         -o-transform-origin: left center;
         transform-origin: left center;
       }
-    
+
       span:nth-child(3) {
         top: 22px;
         -webkit-transform-origin: left center;
@@ -199,7 +199,7 @@ nav.menu{
         transform-origin: left center;
       }
     }
-    
+
     li{
       display: inline-block;
       padding: 40px 16px;
@@ -264,13 +264,13 @@ nav.menu{
               background: white;
               transition: all .15s ease-in-out;
             }
-    
+
             &:hover:before{
               width: 100%
             }
           }
         }
-        
+
         &:hover{
           visibility: visible;
           opacity: 1;
@@ -291,7 +291,7 @@ nav.menu{
       .hamburger{
         display: block;
       }
-      
+
       li .dropdown-content{
         visibility: visible;
         opacity: 1;
@@ -335,12 +335,12 @@ nav.menu{
           transform: rotate(45deg);
           left: 4px;
         }
-      
+
         span:nth-child(2) {
           width: 0%;
           opacity: 0;
         }
-      
+
         span:nth-child(3) {
           -webkit-transform: rotate(-45deg);
           -moz-transform: rotate(-45deg);
@@ -432,8 +432,8 @@ header {
 
         &.icon-github{
           a::before{
-           background-image:url('../images/github.png'); 
-          }          
+           background-image:url('../images/github.png');
+          }
         }
       }
     }
@@ -496,7 +496,7 @@ section.download{
       }
 
       th{
-        border-bottom: 1px solid rgba(255, 255, 255, 0.7);     
+        border-bottom: 1px solid rgba(255, 255, 255, 0.7);
         padding-bottom: 20px;
 
         img{
@@ -515,16 +515,16 @@ section.download{
           }
         }
       }
-      
+
       tbody{
         tr{
           td{
-            border-bottom: 1px solid rgba(255, 255, 255, 0.7);            
+            border-bottom: 1px solid rgba(255, 255, 255, 0.7);
             padding: 8px 0;
 
             a{
               padding: 5px 0;
-              display: inline-block;      
+              display: inline-block;
             }
 
             img{
@@ -535,7 +535,7 @@ section.download{
       }
     }
   }
-  
+
   .h-scroll{
     overflow-x: auto;
   }
@@ -546,7 +546,7 @@ section.download{
 
 section.news{
   padding: 150px 0 50px;
-  
+
   h2{
     color: white;
     text-align: right;
@@ -568,7 +568,7 @@ section.news{
       .slide{
         background: linear-gradient(to top, $light-gradient-bottom, $light-gradient-top);
         padding: 30px;
-        
+
         .top{
           font-size: 0;
 
@@ -580,7 +580,7 @@ section.news{
             display: inline-block;
             width: 70%;
             color: $main-color;
-            
+
             // &:hover{
             //   text-decoration: underline;
             // }
@@ -708,6 +708,13 @@ section.support{
         background-repeat: no-repeat;
         background-position: center;
       }
+
+      &.icon-discourse::after{
+        background-image: url('../images/discourse.png');
+        background-size: 60%;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
     }
 
     .text{
@@ -727,11 +734,11 @@ body.news-list-page{
   min-height: 100vh;
 
   section.news{
-    
+
     .container{
       background-color: white;
       border-radius: 5px;
-      padding: 30px 50px;  
+      padding: 30px 50px;
 
       .news{
         border-bottom: 2px solid #38485b33;
